@@ -12,7 +12,23 @@
 		895481CE1F0E4DC300655C07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 895481CC1F0E4DC300655C07 /* Main.storyboard */; };
 		895481D01F0E4DC300655C07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 895481CF1F0E4DC300655C07 /* Assets.xcassets */; };
 		895481D31F0E4DC300655C07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 895481D11F0E4DC300655C07 /* LaunchScreen.storyboard */; };
+		895481DB1F0E4E9700655C07 /* SampleOne.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 895481DA1F0E4E9700655C07 /* SampleOne.framework */; };
+		895481DC1F0E4E9700655C07 /* SampleOne.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 895481DA1F0E4E9700655C07 /* SampleOne.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		895481DD1F0E4E9700655C07 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				895481DC1F0E4E9700655C07 /* SampleOne.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		895481C51F0E4DC300655C07 /* FrameworkTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrameworkTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +38,7 @@
 		895481CF1F0E4DC300655C07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		895481D21F0E4DC300655C07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		895481D41F0E4DC300655C07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		895481DA1F0E4E9700655C07 /* SampleOne.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SampleOne.framework; path = Frameworks/SampleOne.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				895481DB1F0E4E9700655C07 /* SampleOne.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +56,7 @@
 		895481BC1F0E4DC200655C07 = {
 			isa = PBXGroup;
 			children = (
+				895481DA1F0E4E9700655C07 /* SampleOne.framework */,
 				895481C71F0E4DC300655C07 /* FrameworkTest */,
 				895481C61F0E4DC300655C07 /* Products */,
 			);
@@ -74,6 +93,7 @@
 				895481C11F0E4DC300655C07 /* Sources */,
 				895481C21F0E4DC300655C07 /* Frameworks */,
 				895481C31F0E4DC300655C07 /* Resources */,
+				895481DD1F0E4E9700655C07 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -96,6 +116,7 @@
 				TargetAttributes = {
 					895481C41F0E4DC300655C07 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = S6G5SPU6RW;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -262,6 +283,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = S6G5SPU6RW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = FrameworkTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sample.FrameworkTest;
@@ -274,6 +300,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = S6G5SPU6RW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = FrameworkTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sample.FrameworkTest;
